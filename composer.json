@@ -27,6 +27,9 @@
             "Database\\Seeders\\": "database/seeders/"
         }
     },
+
+    
+    
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"
@@ -35,7 +38,10 @@
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
+            "@php artisan package:discover --ansi",
+            "@php artisan statamic:install --ansi", 
+            "@php artisan statamic:search:update --all --ansi",
+            "@php artisan statamic:static:clear --ansi"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
@@ -48,8 +54,13 @@
         ]
     },
     "extra": {
+        "branch-alias": {
+            "dev-master": "10.x-dev"
+        },
         "laravel": {
-            "dont-discover": []
+            "dont-discover": [
+                "laravel/dusk"
+            ]
         }
     },
     "config": {
