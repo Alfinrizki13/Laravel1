@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /node_modules
 /public/hot
 /public/storage
@@ -38,4 +37,4 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
->>>>>>> 4615c758339b1848bb8112fd84ae53cf1a6e9d5f
+
